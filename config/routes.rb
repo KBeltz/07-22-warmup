@@ -2,6 +2,12 @@ Rails.application.routes.draw do
 
   get "users" => 'users#index'
 
+  # Where the edit form submits
+  put "users/:id" => 'users#update'
+
+  # Shows the form to edit user number [:id]
+  get "users/:id/edit" => 'users#edit'
+
   # Where the new users form submits.
   post "users" => 'users#create'
 
