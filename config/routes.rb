@@ -2,7 +2,11 @@ Rails.application.routes.draw do
 
   get "users" => 'users#index'
 
-  get "users/:id" => 'posts#show'
+  # Must be above the 'show' route, because otherwise
+  # params[:id] will be "new".
+  get "users/new" => 'users#new'
+
+  get "users/:id" => 'users#show'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
