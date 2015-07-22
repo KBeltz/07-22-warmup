@@ -1,28 +1,21 @@
-== README
+The general goal of this project is to build a todo list application. Here is the spec, as well as some rules:
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+No CSS. No JavaScript. No JSON. (Yet.)
+The application should support multiple users, each with their own private todo list.
+Use RESTful resource routing wherever appropriate.
+Use sensible URL design (e.g. when I'm logged in, my dashboard should be "/dashboard" – not "/users/5").
+Do not hard-code any application paths. Use named routes and the methods for accessing those named routes.
+Show the currently logged-in user's email address (or some other identifying information) in the header. Use the layout view to keep things DRY.
+When you finish a basic todo application in accordance with the above guidelines, submit for approval using the usual protocol (GitHub Issue, link to deployed site, mention me in a help channel).
 
-Things you may want to cover:
+After receiving approval, implement some/all of the following:
 
-* Ruby version
+(No particular order...)
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Research CSS frameworks, like Twitter Bootstrap, Zurb Foundation, or others. Can you implement a framework onto your website for a quick-and-easy design?
+There will be multiple installation instructions. Avoid the ones that use SASS, LESS, Bower, or Grunt. You should use "vanilla" CSS/JS.
+You will want to disable turbolinks first.
+Implementation task categorization.
+Implement task ordering.
+Implement marking tasks completed using AJAX.
+You will want to disable turbolinks first.
