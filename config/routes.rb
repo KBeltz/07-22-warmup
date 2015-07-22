@@ -2,6 +2,9 @@ Rails.application.routes.draw do
 
   get "users" => 'users#index'
 
+  # Where the new users form submits.
+  post "users" => 'users#create'
+
   # Must be above the 'show' route, because otherwise
   # params[:id] will be "new".
   get "users/new" => 'users#new'

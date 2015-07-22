@@ -14,7 +14,15 @@ class UsersController < ApplicationController
     # Automatically load the view in /views/users/new.html.erb
   end
 
+  # Processes the new user form submission
   def create
-
+    @user = User.new(params.permit(:name, :password))
+    # {name: params[:name], password: params[:password]}
+      if @user.save
+        redirect_to "/users" # redirection needs a request path
+        # rendering needs a specific view template to show.
+      else
+        render "new" # users folder is assumed
+      end
   end
 end
