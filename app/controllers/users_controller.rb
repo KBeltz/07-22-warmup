@@ -16,7 +16,7 @@ class UsersController < ApplicationController
 
   # Processes the new user form submission
   def create
-    @user = User.new(params.permit(:name, :password))
+    @user = User.new(user_params)
     # {name: params[:name], password: params[:password]}
       if @user.save
         redirect_to "/users" # redirection needs a request path
@@ -24,5 +24,12 @@ class UsersController < ApplicationController
       else
         render "new" # users folder is assumed
       end
+  end
+
+  # utility methods
+  private
+
+  def user_params
+    params.permit(:name, :password)
   end
 end
