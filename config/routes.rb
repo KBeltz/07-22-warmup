@@ -2,6 +2,8 @@ Rails.application.routes.draw do
 
   get "users" => 'users#index'
 
+  delete "users/:id" => 'users#destroy'
+
   # Where the edit form submits
   put "users/:id" => 'users#update'
 
